@@ -6,15 +6,15 @@
 #    By: thessena <thessena@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/06 10:55:15 by thessena          #+#    #+#              #
-#    Updated: 2024/12/11 15:50:54 by thessena         ###   ########.fr        #
+#    Updated: 2024/12/20 15:34:23 by thessena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME_SERVER = server
 NAME_CLIENT = client
 
-SRC_SERVER = src/server.c src/utils.c
-SRC_CLIENT = src/client.c src/utils.c
+SRC_SERVER = src/server.c
+SRC_CLIENT = src/client.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

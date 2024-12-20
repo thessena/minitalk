@@ -6,7 +6,7 @@
 /*   By: thessena <thessena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 10:03:13 by thessena          #+#    #+#             */
-/*   Updated: 2024/12/13 10:03:45 by thessena         ###   ########.fr       */
+/*   Updated: 2024/12/20 15:05:37 by thessena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,9 @@
 # include <signal.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
+# include <string.h>
 
 # define BIT_COUNT 8
-
-void    send_message(int server_pid, const char *message);
-
-void    handle_signal(int signal);
-
-void    error_exit(const char *error_message);
 
 #endif
