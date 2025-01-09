@@ -6,23 +6,35 @@
 /*   By: thessena <thessena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 11:01:01 by thessena          #+#    #+#             */
-/*   Updated: 2024/12/20 15:36:41 by thessena         ###   ########.fr       */
+/*   Updated: 2025/01/09 15:00:29 by thessena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minitalk.h"
 
+void	acknowledge_signal(int bit)
+{
+	if (bit == 1)
+		write(1, "Server got 1\n", 13);
+	else if (bit == 0)
+		write(1, "Server got 0\n", 13);
+}
+
 void	send_char(pid_t pid, char c)
 {
 	int	i;
+	int	bit;
 
 	i = 7;
 	while (i >= 0)
 	{
+		bit = (c >> i) & 1;
 		if ((c >> i) & 1)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
+		usleep(100);
+		acknowledge_signal(bit);
 		usleep(100);
 		i--;
 	}
