@@ -6,7 +6,7 @@
 /*   By: thessena <thessena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 10:03:13 by thessena          #+#    #+#             */
-/*   Updated: 2024/12/20 15:05:37 by thessena         ###   ########.fr       */
+/*   Updated: 2025/01/11 13:20:32 by thessena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,5 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include <string.h>
-
-# define BIT_COUNT 8
 
 #endif
